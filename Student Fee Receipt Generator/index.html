@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fee Receipt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Fee Receipt Generator</h2>
+        
+        <form id="feeForm">
+            <label>Student Name:</label>
+            <input type="text" id="name" required>
+
+            <label>Course:</label>
+            <input type="text" id="course" required>
+
+            <label>Fee Amount:</label>
+            <input type="number" id="amount" required>
+
+            <label>Payment Method:</label>
+            <select id="payment">
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="Online">Online</option>
+            </select>
+
+            <label>Date of Payment:</label>
+            <input type="date" id="date" required>
+
+            <label>Month:</label>
+            <select id="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <button type="button" onclick="generateReceipt()">Generate Receipt</button>
+        </form>
+
+        <div id="receipt" class="hidden">
+            <h2>Sri Lalitha Natya Kalanikethan</h2> 
+            <h3>Fee Receipt</h3>
+            <p><strong>Name:</strong> <span id="r_name"></span></p>
+            <p><strong>Roll Number:</strong> <span id="r_roll"></span></p>
+            <p><strong>Course:</strong> <span id="r_course"></span></p>
+            <p><strong>Fee Amount:</strong> ₹<span id="r_amount"></span></p>
+            <p><strong>Payment Method:</strong> <span id="r_payment"></span></p>
+            <p><strong>Date of Payment:</strong> <span id="r_date"></span></p>
+            <p><strong>Month:</strong> <span id="r_month"></span></p>
+            <button onclick="printReceipt()">Print Receipt</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
